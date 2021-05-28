@@ -1,13 +1,12 @@
-home
-
-{% url 'home' %}
-
-<ul>
+<div>
     {% for pet in pets %}
-    <li>
+    <div class="petname">
         <a href="{% url 'pet_detail' pet.id %}">
-            {{ pet.name|capfirst }}
+            <h3>{{ pet.name|capfirst }}</h3>
         </a>
-    </li>
+        
+    </div>
     {% endfor %}
-</ul>
+
+</div>
+
